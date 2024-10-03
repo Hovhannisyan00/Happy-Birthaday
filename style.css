@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #e0c3fc, #8ec5fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .container {
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    margin-top: 150px;  /* Added margin to ensure space for balloons */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .message {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .wish-btn {
+    background-color: #ff9a9e;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: bounce 1s infinite alternate;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .wish-btn:hover {
+    transform: scale(1.1);
+    background-color: #ff6f6f;
+  }
+  
+  .balloons {
+    position: absolute;
+    top: 20px;  /* Position the balloons below the top */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 0;
+  }
+  
+  .balloon {
+    width: 60px;
+    height: 100px;
+    background: radial-gradient(circle at top, #ff9a9e, #fecfef);
+    border-radius: 50%;
+    position: relative;
+    animation: float 5s ease-in-out infinite;
+  }
+  
+  .balloon:before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background: #fff;
+    transform: translateX(-50%);
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-30px) scale(1.05);
+    }
+  }
+  
+  .balloon1 {
+    animation-delay: 0s;
+  }
+  
+  .balloon2 {
+    animation-delay: 1s;
+  }
+  
+  .balloon3 {
+    animation-delay: 2s;
+  }
+  
+  .balloon4 {
+    animation-delay: 3s;
+  }
+  
+  .balloon5 {
+    animation-delay: 4s;
+  }
+  
+  img {
+    display: none;
+    width: 300px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  img.show {
+    display: block;
+    animation: fadeIn 1s ease-in-out, pulse 1s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .wish-btn {
+    display: block;
+    margin: 20px auto;
+  }
+  
